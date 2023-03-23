@@ -3,7 +3,7 @@
     {
         "id": "1",
         "nombre": "Hoyo X",
-        "anios": "21",
+        "anios": "21 años",
         "identidad": "Ximena Loya",
         "poderes": ["invisibilidad", "telequinesis"]
     },
@@ -12,7 +12,7 @@
     {
         "id": "2",
         "nombre": "Hoyo J",
-        "anios": "21",
+        "anios": "21 años",
         "identidad": "Jessica Ortiz",
         "poderes": ["teletransportación", "viaje en el tiempo"]
     },
@@ -21,7 +21,7 @@
     {
         "id": "3",
         "nombre": "Hoyo 10",
-        "anios": "22",
+        "anios": "22 años",
         "identidad": "Ana Diez",
         "poderes": ["detener el tiempo", "volar"]
     }

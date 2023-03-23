@@ -6,33 +6,12 @@ const router = Router();
 const superheroes = require ('./data.json');
 console.log(superheroes);
 
-router.get('/', (req,res) =>{
-    res.json(superheroes);
-});
+const superheroesCtrl = require('../controllers/superheroes.controller')
 
-router.get('/:id', (req,res) =>{
-       const {id} = req.params;
+router.get('/', superheroesCtrl.getSuperheroes);
 
-       superheroes.forEach(superheroe => {
-            if(superheroe.id == id){
-                res.json(superheroe);
-            }
-        });
+router.get('/:id', superheroesCtrl.getSuperheroes);
 
-    console.log(id);
-});
-
-router.post('/', (req,res) => {
-const {nombre, años, identidad, poderes} = req.body;
-    if(nombre && años && identidad && poderes){
-        const id = superheroes.length +1;
-        const nuevoSuperheroe = {...req.body, id};
-        superheroes.push(nuevoSuperheroe);
-        //console.log(nuevoSuperheroe);
-        res.status(200).json(superheroes);
-}else{
-    res.status(500).json({error:'No data'});
-}
-});
+router.post('/', superheroesCtrl.createSuperheroe);
 
 module.exports = router;
